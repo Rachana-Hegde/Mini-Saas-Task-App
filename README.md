@@ -172,17 +172,13 @@ Authorization: Bearer <token>
 
 ---
 
-## 📷 Screenshots
-
-*Add screenshots here (Login, Signup, Dashboard)*
-
----
-
 ## ⚠️ Notes
 
 * PostgreSQL must be running locally
 * `.env` file is required in backend
 * Ensure correct DB credentials
+
+---
 
 ## 📌 Conclusion
 
@@ -193,3 +189,8 @@ This project demonstrates:
 * Database design
 * API integration
 * Clean UI implementation
+
+## 👩‍💻 Author
+
+**Rachana-Hegde**
+GitHub: `https://github.com/Rachana-Hegde`
