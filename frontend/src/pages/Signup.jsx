@@ -1,24 +1,19 @@
 import { useState } from "react";
+import { signupUser } from "../services/api";
 
 export default function Signup() {
   const [form, setForm] = useState({ email: "", password: "" });
 
   const handleSignup = async () => {
-    const res = await fetch("http://localhost:5000/api/auth/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(form)
-    });
+    const data = await signupUser(form);
 
-    const data = await res.json();
+    console.log("Signup response:", data);
 
-    if (data.id) {
-      alert("Signup successful");
-      window.location = "/";
+    if (data.email) {
+        alert("Signup successful");
+        window.location.href = "/";
     } else {
-      alert(data.msg || "Signup failed");
+        alert(data.message || "Signup failed");
     }
   };
 
