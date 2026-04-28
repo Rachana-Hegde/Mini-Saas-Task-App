@@ -1,8 +1,8 @@
-const API = "http://localhost:5000/api";
+const API = "https://task-backend-whve.onrender.com/api";
 
 // LOGIN
 export const loginUser = async (data) => {
-  const res = await fetch("http://localhost:5000/api/auth/login", {
+  const res = await fetch(`${API}/auth/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -11,9 +11,6 @@ export const loginUser = async (data) => {
   });
 
   const result = await res.json();
-
-  console.log("Login API result:", result);
-
   return result;
 };
 
@@ -21,7 +18,7 @@ export const loginUser = async (data) => {
 export const getTasks = async () => {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://localhost:5000/api/tasks", {
+  const res = await fetch(`${API}/tasks`, {
     headers: {
       Authorization: `Bearer ${token}`
     }
