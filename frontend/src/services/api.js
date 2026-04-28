@@ -14,6 +14,19 @@ export const loginUser = async (data) => {
   return result;
 };
 
+//Signup 
+export const signupUser = async (data) => {
+  const res = await fetch(`${API}/auth/signup`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+
+  return res.json();
+};
+
 // TASKS
 export const getTasks = async () => {
   const token = localStorage.getItem("token");
