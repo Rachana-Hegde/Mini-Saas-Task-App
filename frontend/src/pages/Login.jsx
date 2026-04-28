@@ -10,37 +10,18 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
-    // Basic validation
-    if (!form.email || !form.password) {
-      alert("Please enter email and password");
+    const data = await loginUser(form);
+
+    console.log("Login response:", data); 
+
+    if (!data.token) {
+      alert("Login failed");
       return;
     }
 
-    try {
-      setLoading(true);
+    localStorage.setItem("token", data.token);
 
-      const data = await loginUser(form);
-
-      console.log("Login response:", data);
-
-      // If no token login failed
-      if (!data.token) {
-        alert(data.msg || "Login failed");
-        return;
-      }
-
-      // Save token
-      localStorage.setItem("token", data.token);
-
-      // Redirect to dashboard
-      window.location.href = "/dashboard";
-
-    } catch (error) {
-      console.error("Login error:", error);
-      alert("Something went wrong");
-    } finally {
-      setLoading(false);
-    }
+    window.location.reload();
   };
 
   return (
