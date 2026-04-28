@@ -1,0 +1,10 @@
+# Ignore dependencies
+node_modules/
+
+# Environment files (important for security)
+.env
+backend/.env
+
+# Build output
+dist/
+build/
