@@ -191,6 +191,4 @@ This project demonstrates:
 * Clean UI implementation
 
 ## 👩‍💻 Author
-
-**Rachana-Hegde**
-GitHub: `https://github.com/Rachana-Hegde`
+🔗 **GitHub**: [Rachana-Hegde](https://github.com/Rachana-Hegde)
