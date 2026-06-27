@@ -192,3 +192,7 @@ This project demonstrates:
 
 ## 👩‍💻 Author
 🔗 **GitHub**: [Rachana-Hegde](https://github.com/Rachana-Hegde)
+
+## 🌐 Live API
+
+https://mini-saas-task-app-rho.vercel.app/
