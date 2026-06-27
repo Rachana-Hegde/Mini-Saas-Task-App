@@ -195,4 +195,4 @@ This project demonstrates:
 
 ## 🌐 Live API
 
-https://mini-saas-task-app-rho.vercel.app/
+https://mini-saas-task-app-rho.vercel.app
